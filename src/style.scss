@@ -96,21 +96,15 @@ $white: #fff;
 .btn-mobile {
   display: none;
 }
-.btn-mobile.active .bar:nth-child(2) {
-  opacity: 0;
-}
-.btn-mobile.active .bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-.btn-mobile.active .bar:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
 
 .nav-menu {
   display: none;
 }
 
 @media (max-width: 767px) {
+  .container {
+    max-width: 95%;
+  }
   .socialmedia {
     display: none;
   }
@@ -136,9 +130,40 @@ $white: #fff;
   .navBar .buttons {
     display: none;
   }
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    right: -1000px;
+    background-color: $white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);;
+    width: 100%;
+    color: white;
+    transition: 0.8s;
+    font-size: 1rem;
+    a {
+      padding: 0.7rem;
+      font-size: 1rem;
+      font-weight: 500;
+      color: $primary;
+    }
 }
+  }
+  .nav-item:hover {
+    border-bottom: 1px solid $grey;
+    cursor: pointer;
+  } 
+  .nav-menu.active{ 
+    right: 0px;
+  }
+
 
 @media (min-width: 768px) and (max-width: 1399px) {
+  .container {
+    max-width: 95%;
+  }
   .topline {
     background-color: $white;
     border-bottom: 0.1px solid $primary;
@@ -162,11 +187,46 @@ $white: #fff;
       }
     }
   }
+  .btn-mobile.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .btn-mobile.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .btn-mobile.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
   .navBar .buttons {
     display: none;
   }
   .btn-mobile {
     display: block;
   }
-  
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: fixed;
+    right: -1000px;
+    background-color: $white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);;
+    width: 100%;
+    color: white;
+    transition: 0.8s;
+    font-size: 1rem;
+    a {
+      padding-bottom: 0.5rem;
+      font-size: 1rem;
+      font-weight: 500;
+      color: $primary;
+      margin: 1rem;
+    }
 }
+  }
+  .nav-item:hover {
+    border-bottom: 1px solid $grey;
+    cursor: pointer;
+  } 
+  .nav-menu.active{ 
+    right: 0px;
+  }
