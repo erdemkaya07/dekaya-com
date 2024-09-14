@@ -49,7 +49,7 @@ a {
 }
 
 .topline {
-  background-color: #e2e5f1;
+  background-color: rgb(108, 182, 255);
   border-radius: 0px 0px 10px 10px;
 }
 .topline .topline-ul {
@@ -203,6 +203,74 @@ a {
   padding-left: 1rem;
 }
 
+.omOssLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  gap: 1rem;
+  background-color: rgb(108, 182, 255);
+  border-radius: 10px;
+}
+.omOssLayout .omOssRight {
+  margin-left: 2rem;
+  width: 95%;
+}
+.omOssLayout .omOssRight h1 {
+  border-bottom: 1px solid #0b0f19;
+}
+.omOssLayout .omOssRight p {
+  line-height: 1.3rem;
+}
+.omOssLayout .omOssRight .omOssCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1fr;
+}
+.omOssLayout .omOssRight .omOssCards .omOssCard {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2rem;
+}
+.omOssLayout .omOssRight .omOssCards .omOssCard span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: #007fff;
+  border-radius: 50%;
+}
+.omOssLayout .omOssRight .omOssCards .omOssCard i {
+  position: absolute;
+  top: 7px;
+  left: 6px;
+  color: #e6e4e4;
+}
+.omOssLayout .omOssRight .omOssCards .omOssCard .omOssCardDetails {
+  padding-left: 1rem;
+}
+.omOssLayout .omOssRight .omOssCards .omOssCard .omOssCardDetails p {
+  line-height: 1.5rem;
+  font-size: 0.8rem;
+}
+.omOssLayout .omOssLeft {
+  width: 85%;
+  margin-left: 5rem;
+}
+.omOssLayout .omOssLeft img {
+  border-radius: 10px;
+  width: 400px;
+  height: 200px;
+  margin-bottom: 2rem;
+}
+.omOssLayout .omOssLeft h2 {
+  margin-bottom: 2rem;
+}
+.omOssLayout .omOssLeft p {
+  line-height: 1.5rem;
+  width: 90%;
+}
+
 @media (max-width: 767px) {
   .container {
     max-width: 95%;
@@ -275,6 +343,11 @@ a {
   }
   .nav-menu.active {
     right: 0px;
+  }
+  .marqueeText {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #007fff;
   }
   .serviceLayout {
     grid-template-columns: 1fr;

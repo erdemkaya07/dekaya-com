@@ -58,7 +58,7 @@ $transition: all 0.5s;
 }
 
 .topline {
-  background-color: $lightGrey;
+  background-color: $secondary;
   border-radius: 0px 0px 10px 10px;
   .topline-ul {
     gap: 1rem;
@@ -214,6 +214,74 @@ $transition: all 0.5s;
   }
 }
 
+.omOssLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  gap: 1rem;
+  background-color: $secondary;
+  border-radius: 10px;
+  .omOssRight {
+    margin-left: 2rem;
+    width: 95%;
+    h1 {
+      border-bottom: 1px solid $grey;
+    }
+    p {
+      line-height: 1.3rem;
+    }
+    .omOssCards{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1fr;
+      .omOssCard {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 2rem;
+        span {
+          position: relative;
+          width: 30px;
+          height: 30px;
+          background-color: $primary;
+          border-radius: 50%;
+        }
+        i {
+          position: absolute;
+          top: 7px;
+          left: 6px;
+          color: #e6e4e4;
+        }
+        .omOssCardDetails {
+          padding-left: 1rem;
+          p {
+            line-height: 1.5rem;
+            font-size: .8rem;
+          }
+        }
+      }
+    }
+  }
+  .omOssLeft {
+    width: 85%;
+    margin-left: 5rem;
+    img {
+      border-radius: 10px;
+      width: 400px;
+      height: 200px;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      margin-bottom: 2rem;
+    }
+    p {
+      line-height: 1.5rem;
+      width: 90%;
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .container {
     max-width: 95%;
@@ -286,6 +354,11 @@ $transition: all 0.5s;
   }
   .nav-menu.active {
     right: 0px;
+  }
+  .marqueeText {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $primary;
   }
   .serviceLayout { 
     grid-template-columns: 1fr;
