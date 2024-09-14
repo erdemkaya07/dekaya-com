@@ -23,10 +23,27 @@ $primary: #007fff;
 $lightGrey: #e2e5f1;
 $grey: #0b0f19;
 $white: #fff;
+$transition: all 0.5s;
 
 .container {
   max-width: 90%;
   margin: 0 auto;
+}
+
+.btn-primary {
+  width: 140px;
+  height: 45px;
+  font-size: 1rem;
+  border: 1px solid $white;
+  border-radius: 5px;
+  background-color: $primary;
+  color: $white;
+  &:hover {
+    background-color: $white;
+    color: $primary;
+    cursor: pointer;
+    transition: $transition;
+  }
 }
 
 .topline,
@@ -44,7 +61,7 @@ $white: #fff;
   .topline-ul {
     gap: 1rem;
     i {
-      font-size: 1.2rem;
+      font-size: 1rem;
       padding: 1rem;
       color: $primary;
     }
@@ -74,12 +91,12 @@ $white: #fff;
     padding-right: 1rem;
     a {
       margin-right: 1rem;
-      font-weight: 700;
+      font-weight: 500;
       color: $grey;
     }
     a:hover {
       color: $primary;
-      transition: all 0.5ms;
+      transition: $transition;
       border-bottom: 1px solid $grey;
     }
   }
@@ -100,6 +117,33 @@ $white: #fff;
 .nav-menu {
   display: none;
 }
+/* Banner */
+
+.bannerLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "bannerText"
+  "imgBanner";
+  gap: 1rem;
+  .imgBanner{
+    grid-template-areas: "imgBanner";
+    #bannerImg{
+      width: 100%;
+    }
+  }
+  .bannerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    color: $white;
+    padding: 2rem;
+    border-radius: 0px 0px 7px 7px;
+    gap: 1rem;
+  }
+}
+
 
 @media (max-width: 767px) {
   .container {
@@ -127,6 +171,15 @@ $white: #fff;
       }
     }
   }
+  .btn-mobile.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .btn-mobile.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .btn-mobile.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
   .navBar .buttons {
     display: none;
   }
@@ -141,7 +194,7 @@ $white: #fff;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);;
     width: 100%;
     color: white;
-    transition: 0.8s;
+    transition: $transition;
     font-size: 1rem;
     a {
       padding: 0.7rem;
@@ -149,15 +202,23 @@ $white: #fff;
       font-weight: 500;
       color: $primary;
     }
-}
+  }
+  .bannerText {
+    flex-direction: column;
+    padding: 1rem !important;
+    .bannerP {
+      text-align: center;
+      font-size: .8rem;
+    }
   }
   .nav-item:hover {
-    border-bottom: 1px solid $grey;
-    cursor: pointer;
+  border-bottom: 1px solid $grey;
+  cursor: pointer;
   } 
   .nav-menu.active{ 
     right: 0px;
   }
+}
 
 
 @media (min-width: 768px) and (max-width: 1399px) {
@@ -212,7 +273,7 @@ $white: #fff;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);;
     width: 100%;
     color: white;
-    transition: 0.8s;
+    transition: $transition;
     font-size: 1rem;
     a {
       padding-bottom: 0.5rem;
@@ -221,7 +282,6 @@ $white: #fff;
       color: $primary;
       margin: 1rem;
     }
-}
   }
   .nav-item:hover {
     border-bottom: 1px solid $grey;
@@ -230,3 +290,11 @@ $white: #fff;
   .nav-menu.active{ 
     right: 0px;
   }
+  .bannerText {
+    flex-direction: column;
+    padding: 1rem !important;
+    .bannerP {
+      text-align: center;
+    }
+  }
+}
