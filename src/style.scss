@@ -20,8 +20,10 @@ a {
 }
 
 $primary: #007fff;
+$secondary: rgb(108, 182, 255);
 $lightGrey: #e2e5f1;
 $grey: #0b0f19;
+$grey500: rgb(45, 47, 54);
 $white: #fff;
 $transition: all 0.5s;
 
@@ -122,13 +124,13 @@ $transition: all 0.5s;
 .bannerLayout {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: 
-  "bannerText"
-  "imgBanner";
+  grid-template-areas:
+    "bannerText"
+    "imgBanner";
   gap: 1rem;
-  .imgBanner{
+  .imgBanner {
     grid-template-areas: "imgBanner";
-    #bannerImg{
+    #bannerImg {
       width: 100%;
     }
   }
@@ -144,6 +146,68 @@ $transition: all 0.5s;
   }
 }
 
+/* Service Layout */
+#servicesLayout {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+.serviceLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  width: 95%;
+  .serviceCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 $secondary;
+    padding: 0.5rem;
+    .cardImg {
+      width: 250px;
+      height: 200px;
+      img {
+        padding-top: 1rem;
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .cardDetail {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      width: 95%;
+      h3 {
+        font-weight: 500;
+      }
+      p {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        color: $grey500;
+        font-size: .8rem;
+      }
+      .cardDetailButton {
+        color: #0b0f19;
+        font-size: .8rem;
+        &:hover {
+          cursor: pointer;
+          color: $primary;
+          transition: $transition;
+        }
+        i {
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: 767px) {
   .container {
@@ -191,7 +255,7 @@ $transition: all 0.5s;
     position: fixed;
     right: -1000px;
     background-color: $white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 100%;
     color: white;
     transition: $transition;
@@ -208,18 +272,21 @@ $transition: all 0.5s;
     padding: 1rem !important;
     .bannerP {
       text-align: center;
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
   }
   .nav-item:hover {
-  border-bottom: 1px solid $grey;
-  cursor: pointer;
-  } 
-  .nav-menu.active{ 
+    border-bottom: 1px solid $grey;
+    cursor: pointer;
+  }
+  .nav-menu.active {
     right: 0px;
   }
+  .serviceLayout { 
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }
-
 
 @media (min-width: 768px) and (max-width: 1399px) {
   .container {
@@ -270,7 +337,7 @@ $transition: all 0.5s;
     position: fixed;
     right: -1000px;
     background-color: $white;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 100%;
     color: white;
     transition: $transition;
@@ -286,8 +353,8 @@ $transition: all 0.5s;
   .nav-item:hover {
     border-bottom: 1px solid $grey;
     cursor: pointer;
-  } 
-  .nav-menu.active{ 
+  }
+  .nav-menu.active {
     right: 0px;
   }
   .bannerText {
@@ -296,5 +363,9 @@ $transition: all 0.5s;
     .bannerP {
       text-align: center;
     }
+  }
+  .serviceLayout { 
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
   }
 }
