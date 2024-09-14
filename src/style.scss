@@ -156,11 +156,15 @@ $transition: all 0.5s;
   padding-top: 2rem;
   padding-bottom: 5rem;
 }
+.serviceGridControl {
+  margin-left: 15%;
+  margin-right: 15%;
+}
 .serviceLayout {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr ;
   justify-items: center;
-  width: 95%;
+  gap: 2rem;
   .serviceCard {
     display: flex;
     flex-direction: column;
@@ -214,19 +218,22 @@ $transition: all 0.5s;
   }
 }
 
+#omOss {
+  background-color: $secondary;
+}
 .omOssLayout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-top: 4rem;
   padding-bottom: 4rem;
   gap: 1rem;
-  background-color: $secondary;
+  color: #ffffff;
   border-radius: 10px;
   .omOssRight {
     margin-left: 2rem;
     width: 95%;
     h1 {
-      border-bottom: 1px solid $grey;
+      border-bottom: 1px solid $primary;
     }
     p {
       line-height: 1.3rem;
@@ -364,6 +371,44 @@ $transition: all 0.5s;
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+  .serviceGridControl {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .omOssLayout { 
+    grid-template-columns: 1fr;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    .omOssRight {
+      margin-left: 1rem;
+      width: 100%;
+      & :nth-child(2) {
+        width: 95%;
+      }
+      .omOssCards {
+        grid-template-columns: 1fr;
+        .omOssCard {
+          margin-top: 1.2rem;
+        }
+      }
+     
+    }
+    .omOssLeft {
+      width: 100%;
+      margin-left: 1rem;
+      border-top: 1px solid $primary;
+      img {
+        display: none;
+      }
+      h2 {
+        padding-top: 1rem;
+      }
+      p {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $primary;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1399px) {
@@ -442,8 +487,30 @@ $transition: all 0.5s;
       text-align: center;
     }
   }
+  .serviceGridControl {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .serviceLayout { 
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+  }
+  .omOssLayout { 
+    grid-template-columns: 1fr;
+    .omOssLeft {
+      width: 100%;
+      margin-left: 1rem;
+      border-top: 1px solid $primary;
+      img {
+        display: none;
+      }
+      h2 {
+        padding-top: 1rem;
+      }
+      p {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $primary;
+      }
+    }
   }
 }

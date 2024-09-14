@@ -145,11 +145,16 @@ a {
   padding-bottom: 5rem;
 }
 
+.serviceGridControl {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
 .serviceLayout {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  width: 95%;
+  gap: 2rem;
 }
 .serviceLayout .serviceCard {
   display: flex;
@@ -203,13 +208,17 @@ a {
   padding-left: 1rem;
 }
 
+#omOss {
+  background-color: rgb(108, 182, 255);
+}
+
 .omOssLayout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-top: 4rem;
   padding-bottom: 4rem;
   gap: 1rem;
-  background-color: rgb(108, 182, 255);
+  color: #ffffff;
   border-radius: 10px;
 }
 .omOssLayout .omOssRight {
@@ -217,7 +226,7 @@ a {
   width: 95%;
 }
 .omOssLayout .omOssRight h1 {
-  border-bottom: 1px solid #0b0f19;
+  border-bottom: 1px solid #007fff;
 }
 .omOssLayout .omOssRight p {
   line-height: 1.3rem;
@@ -353,6 +362,43 @@ a {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+  .serviceGridControl {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .omOssLayout {
+    grid-template-columns: 1fr;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .omOssLayout .omOssRight {
+    margin-left: 1rem;
+    width: 100%;
+  }
+  .omOssLayout .omOssRight :nth-child(2) {
+    width: 95%;
+  }
+  .omOssLayout .omOssRight .omOssCards {
+    grid-template-columns: 1fr;
+  }
+  .omOssLayout .omOssRight .omOssCards .omOssCard {
+    margin-top: 1.2rem;
+  }
+  .omOssLayout .omOssLeft {
+    width: 100%;
+    margin-left: 1rem;
+    border-top: 1px solid #007fff;
+  }
+  .omOssLayout .omOssLeft img {
+    display: none;
+  }
+  .omOssLayout .omOssLeft h2 {
+    padding-top: 1rem;
+  }
+  .omOssLayout .omOssLeft p {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #007fff;
+  }
 }
 @media (min-width: 768px) and (max-width: 1399px) {
   .container {
@@ -426,8 +472,30 @@ a {
   .bannerText .bannerP {
     text-align: center;
   }
+  .serviceGridControl {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .serviceLayout {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+  }
+  .omOssLayout {
+    grid-template-columns: 1fr;
+  }
+  .omOssLayout .omOssLeft {
+    width: 100%;
+    margin-left: 1rem;
+    border-top: 1px solid #007fff;
+  }
+  .omOssLayout .omOssLeft img {
+    display: none;
+  }
+  .omOssLayout .omOssLeft h2 {
+    padding-top: 1rem;
+  }
+  .omOssLayout .omOssLeft p {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #007fff;
   }
 }/*# sourceMappingURL=style.css.map */
