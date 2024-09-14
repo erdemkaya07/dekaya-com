@@ -145,6 +145,11 @@ $transition: all 0.5s;
     gap: 1rem;
   }
 }
+.marqueeText {
+  font-size: 2rem;
+  font-weight: 800;
+  color: $primary;
+}
 
 /* Service Layout */
 #servicesLayout {
