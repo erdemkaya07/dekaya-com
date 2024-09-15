@@ -8,6 +8,9 @@
 body {
   font-family: "Poppins", system-ui;
   font-size: 1rem;
+  position: relative;
+  padding-bottom: 2rem;
+  min-height: 100vh;
 }
 
 li {
@@ -71,7 +74,7 @@ a {
   font-size: 1.2rem;
   color: #007fff;
 }
-.socialmedia .socialmedia-ul i:hover {
+.socialmedia .socialmedia-ul:hover {
   color: #fff;
 }
 
@@ -306,6 +309,39 @@ a {
   z-index: -1;
 }
 
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #0b0f19;
+}
+#footer .footerLayout {
+  padding: 2rem;
+  text-align: center;
+}
+#footer .footerLayout p {
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.aboutUsLayout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 11rem;
+}
+.aboutUsLayout img {
+  width: 50%;
+}
+.aboutUsLayout .aboutUsText {
+  padding-top: 2rem;
+  width: 75%;
+}
+.aboutUsLayout .aboutUsText p {
+  line-height: 1.5rem;
+}
+
 @media (max-width: 767px) {
   .container {
     max-width: 95%;
@@ -369,8 +405,10 @@ a {
     color: #007fff;
   }
   .bannerLayout {
-    margin-top: 11rem;
-    gap: 0.5rem;
+    margin-top: 0;
+  }
+  .bannerLayout img {
+    margin-top: 13rem;
   }
   .bannerText {
     flex-direction: column;
@@ -430,8 +468,11 @@ a {
     padding-top: 1rem;
   }
   .omOssLayout .omOssLeft p {
-    padding-bottom: 1rem;
+    padding-bottom: 5rem;
     border-bottom: 1px solid #007fff;
+  }
+  #aboutus {
+    padding-bottom: 4rem;
   }
 }
 @media (min-width: 768px) and (max-width: 1399px) {
@@ -504,6 +545,9 @@ a {
     right: 0px;
   }
   .bannerLayout {
+    margin-top: 0;
+  }
+  .bannerLayout img {
     margin-top: 13rem;
   }
   .bannerText {
@@ -540,6 +584,16 @@ a {
     border-bottom: 1px solid #007fff;
   }
 }
+.aboutUsLayout {
+  margin-top: 0;
+}
+.aboutUsLayout img {
+  margin-top: 13rem;
+}
+.aboutUsLayout .aboutUsText {
+  width: 90%;
+}
+
 @media (min-width: 1400px) {
   #navbar-top .container {
     max-width: 100%;
