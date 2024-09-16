@@ -89,6 +89,7 @@ $transition: all 0.5s;
 .navbarContainer {
   overflow: hidden;
   position: fixed;
+  z-index: 1;
   top: 0;
   width: 90%;
 }
@@ -351,6 +352,15 @@ $transition: all 0.5s;
   }
 }
 
+#references {
+  .referans {
+    padding: 4rem;
+    text-align: center;
+    img {
+      width: 70%;
+    }
+  }
+}
 
 @media (max-width: 767px) {
   .container {

@@ -12,6 +12,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="src/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="src/owlcarousel/owl.theme.default.min.css">
   </head>
   <body>
     <nav>
@@ -258,6 +260,18 @@
         </div>
       </div>
     </section>
+
+    <section id="references">
+      <div class="container">
+        <div class="referans owl-carousel owl-theme">
+          <img src="/images/referans/yartek.jpg" alt="">
+          <img src="/images/referans/tosun.jpg" alt="">
+          <img src="/images/referans/proso.jpg" alt="">
+          <img src="/images/referans/paneks.jpg" alt="">
+          <img src="/images/referans/yartek.jpg" alt="">
+        </div>
+      </div>
+    </section>
     <footer>
       <section id="footer">
         <div class="container">
@@ -267,6 +281,27 @@
         </div>
       </section>
     </footer>
+    <script src="/src/jquery.min.js"></script>
     <script src="/src/main.js"></script>
+    <script src="src/owl.carousel.js"></script>
+    <script src="src/owl.carousel.min.js"></script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
