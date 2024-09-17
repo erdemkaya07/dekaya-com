@@ -335,7 +335,51 @@ $fs-4: 4rem;
   }
 }
 
-.contactUsContainer {
+#contactUs {
+  .contausTitle {
+    margin-top: 11rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    color: $primary;
+  }
+  .contactUsLayout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 95%;
+    gap: 2rem;
+    .contactUsLayoutRight {
+      padding-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .contactDetails {
+        ul {
+          padding-top: 1rem;
+          li {
+            span {
+              font-weight: 800;
+            }
+            line-height: 1.5rem;
+            i {
+              padding-right: 2rem;
+            }
+          }
+        }
+      }
+    }
+    .contactUsLayoutLeft {
+      iframe {
+        width: 100%;
+        height: 450px;
+        border: 1px solid $grey;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+/* .contactUsContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   .googleMap {
@@ -345,7 +389,7 @@ $fs-4: 4rem;
       z-index: -1;
     }
   }
-}
+} */
 
 #footer {
   position: absolute;
@@ -367,13 +411,14 @@ $fs-4: 4rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 11rem;
+  padding-bottom: 7rem;
   img {
-    width: 50%;
+    margin-top: 12rem;
+    width: 30%;
   }
   .aboutUsText {
     padding-top: 2rem;
-    width: 75%;
+    width: 80%;
     p {
       line-height: 1.5rem;
     }
@@ -391,15 +436,19 @@ $fs-4: 4rem;
 }
 
 .header-services {
-  margin-top: 11rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   .header-servicesTitle {
+    margin-top: 12rem;
+    font-size: $fs-2;
     color: $primary;
     margin-bottom: 2rem;
+  }
+  span {
+    color: $primary;
   }
 }
 #referencesPage {
@@ -565,6 +614,14 @@ $fs-4: 4rem;
   #aboutus {
     padding-bottom: 4rem;
   }
+  .aboutUsLayout {
+    .aboutUsText {
+      width: 95%;
+    }
+    img {
+      width: 70%;
+    }
+  }
   #referencesPage {
     .refTitle {
       padding-top: 13rem;
@@ -575,6 +632,32 @@ $fs-4: 4rem;
   }
   .references {
     grid-template-columns: 1fr;
+  }
+  .header-services {
+    .header-servicesTitle {
+      font-size: 1.5rem;
+    }
+    span {
+      font-size: $fs-1;
+    }
+  }
+  #contactUs {
+    .contausTitle {
+      margin-top: 0;
+      padding-bottom: 0;
+      h1 {
+        margin: 0;
+        padding-top: 13rem;
+      }
+    }
+    .contactUsLayout {
+      grid-template-columns: 1fr;
+      width: 100%;
+      padding-bottom: 5rem;
+      .contactUsLayoutRight {
+        padding-top: 1rem;
+      }
+    }
   }
 }
 
@@ -695,14 +778,14 @@ $fs-4: 4rem;
     margin-top: 0;
     img {
       margin-top: 13rem;
+      width: 50%;
     }
     .aboutUsText {
       width: 90%;
     }
   }
   .header-services {
-    margin-top: 0;
-    p {
+    .header-servicesTitle {
       margin-top: 14rem;
     }
   }
@@ -716,6 +799,21 @@ $fs-4: 4rem;
   }
   .references {
     grid-template-columns: 1fr 1fr;
+  }
+  #contactUs {
+    .contausTitle {
+      margin-top: 0;
+      padding-bottom: 0;
+      h1 {
+        margin: 0;
+        padding-top: 15rem;
+      }
+    }
+    .contactUsLayout {
+      grid-template-columns: 1fr;
+      width: 100%;
+      padding-bottom: 5rem;
+    }
   }
 }
 
