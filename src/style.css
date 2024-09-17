@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+.fs-1 {
+  font-size: 1rem;
+}
+
 .fs-2 {
   font-size: 2rem;
 }
@@ -31,6 +35,14 @@ a {
 
 .fs-4 {
   font-size: 4rem;
+}
+
+.fs-05 {
+  font-size: 0.5rem;
+}
+
+.fs-08 {
+  font-size: 0.8rem;
 }
 
 .container {
@@ -375,6 +387,35 @@ a {
   margin-bottom: 2rem;
 }
 
+#referencesPage .refTitle {
+  padding-top: 10rem;
+}
+#referencesPage .refTitle h1 {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.references {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding-bottom: 5rem;
+}
+.references .refCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #007fff;
+  border-radius: 5px;
+}
+.references .refCard img {
+  width: 70%;
+}
+.references .refCard p {
+  padding: 1rem;
+}
+
 @media (max-width: 767px) {
   .container {
     max-width: 95%;
@@ -507,6 +548,15 @@ a {
   #aboutus {
     padding-bottom: 4rem;
   }
+  #referencesPage .refTitle {
+    padding-top: 13rem;
+  }
+  #referencesPage .refTitle h1 {
+    font-size: 1rem;
+  }
+  .references {
+    grid-template-columns: 1fr;
+  }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .container {
@@ -616,24 +666,31 @@ a {
     padding-bottom: 1rem;
     border-bottom: 1px solid #007fff;
   }
+  .aboutUsLayout {
+    margin-top: 0;
+  }
+  .aboutUsLayout img {
+    margin-top: 13rem;
+  }
+  .aboutUsLayout .aboutUsText {
+    width: 90%;
+  }
+  .header-services {
+    margin-top: 0;
+  }
+  .header-services p {
+    margin-top: 14rem;
+  }
+  #referencesPage .refTitle {
+    padding-top: 13rem;
+  }
+  #referencesPage .refTitle h1 {
+    font-size: 1.5rem;
+  }
+  .references {
+    grid-template-columns: 1fr 1fr;
+  }
 }
-.aboutUsLayout {
-  margin-top: 0;
-}
-.aboutUsLayout img {
-  margin-top: 13rem;
-}
-.aboutUsLayout .aboutUsText {
-  width: 90%;
-}
-
-.header-services {
-  margin-top: 0;
-}
-.header-services p {
-  margin-top: 14rem;
-}
-
 @media (min-width: 1200px) {
   #navbar-top .container {
     max-width: 100%;

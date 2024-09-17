@@ -29,10 +29,16 @@ $grey: #0b0f19;
 $grey500: rgb(45, 47, 54);
 $white: #fff;
 $transition: all 0.5s;
+$fs-05: 0.5rem;
+$fs-08: 0.8rem;
+$fs-1: 1rem;
 $fs-2: 2rem;
 $fs-3: 3rem;
 $fs-4: 4rem;
 
+.fs-1 {
+  font-size: $fs-1;
+}
 .fs-2 {
   font-size: $fs-2;
 }
@@ -45,6 +51,13 @@ $fs-4: 4rem;
   font-size: $fs-4;
 }
 
+.fs-05 {
+  font-size: $fs-05;
+}
+
+.fs-08 {
+  font-size: $fs-08;
+}
 .container {
   max-width: 90%;
   margin: 0 auto;
@@ -192,7 +205,7 @@ $fs-4: 4rem;
 }
 .serviceLayout {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   gap: 2rem;
   .serviceCard {
@@ -230,11 +243,11 @@ $fs-4: 4rem;
         margin-top: 1rem;
         margin-bottom: 1rem;
         color: $grey500;
-        font-size: .8rem;
+        font-size: 0.8rem;
       }
       .cardDetailButton {
         color: #0b0f19;
-        font-size: .8rem;
+        font-size: 0.8rem;
         &:hover {
           cursor: pointer;
           color: $primary;
@@ -269,7 +282,7 @@ $fs-4: 4rem;
     p {
       line-height: 1.3rem;
     }
-    .omOssCards{
+    .omOssCards {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1fr;
@@ -295,7 +308,7 @@ $fs-4: 4rem;
           padding-left: 1rem;
           p {
             line-height: 1.5rem;
-            font-size: .8rem;
+            font-size: 0.8rem;
           }
         }
       }
@@ -327,7 +340,7 @@ $fs-4: 4rem;
   grid-template-columns: 1fr 1fr;
   .googleMap {
     iframe {
-      width:100%;
+      width: 100%;
       height: 450px;
       z-index: -1;
     }
@@ -344,8 +357,8 @@ $fs-4: 4rem;
     text-align: center;
     p {
       color: $white;
-      font-size: .8rem;
-    }    
+      font-size: 0.8rem;
+    }
   }
 }
 
@@ -387,6 +400,36 @@ $fs-4: 4rem;
   .header-servicesTitle {
     color: $primary;
     margin-bottom: 2rem;
+  }
+}
+#referencesPage {
+  .refTitle {
+    padding-top: 10rem;
+    h1 {
+      text-align: center;
+      padding-bottom: 2rem;
+    }
+  }
+}
+
+.references {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding-bottom: 5rem;
+  .refCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid $primary;
+    border-radius: 5px;
+    img {
+      width: 70%;
+    }
+    p {
+      padding: 1rem;
+    }
   }
 }
 
@@ -455,7 +498,7 @@ $fs-4: 4rem;
   .bannerLayout {
     margin-top: 0;
     img {
-      margin-top: 13rem
+      margin-top: 13rem;
     }
   }
   .bannerText {
@@ -478,7 +521,7 @@ $fs-4: 4rem;
     font-weight: 600;
     color: $primary;
   }
-  .serviceLayout { 
+  .serviceLayout {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
@@ -486,7 +529,7 @@ $fs-4: 4rem;
     margin-left: 0;
     margin-right: 0;
   }
-  .omOssLayout { 
+  .omOssLayout {
     grid-template-columns: 1fr;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -502,7 +545,6 @@ $fs-4: 4rem;
           margin-top: 1.2rem;
         }
       }
-     
     }
     .omOssLeft {
       width: 100%;
@@ -522,6 +564,17 @@ $fs-4: 4rem;
   }
   #aboutus {
     padding-bottom: 4rem;
+  }
+  #referencesPage {
+    .refTitle {
+      padding-top: 13rem;
+      h1 {
+        font-size: 1rem;
+      }
+    }
+  }
+  .references {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -601,7 +654,7 @@ $fs-4: 4rem;
   .bannerLayout {
     margin-top: 0;
     img {
-      margin-top: 13rem
+      margin-top: 13rem;
     }
   }
   .bannerText {
@@ -615,11 +668,11 @@ $fs-4: 4rem;
     margin-left: 0;
     margin-right: 0;
   }
-  .serviceLayout { 
+  .serviceLayout {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
-  .omOssLayout { 
+  .omOssLayout {
     grid-template-columns: 1fr;
     .omOssLeft {
       width: 100%;
@@ -637,24 +690,36 @@ $fs-4: 4rem;
       }
     }
   }
-}
-.aboutUsLayout {
-  margin-top: 0;
-  img {
-    margin-top: 13rem;
+
+  .aboutUsLayout {
+    margin-top: 0;
+    img {
+      margin-top: 13rem;
+    }
+    .aboutUsText {
+      width: 90%;
+    }
   }
-  .aboutUsText{
-    width: 90%;
+  .header-services {
+    margin-top: 0;
+    p {
+      margin-top: 14rem;
+    }
   }
-}
-.header-services { 
-  margin-top: 0;
-  p {
-    margin-top: 14rem;
+  #referencesPage {
+    .refTitle {
+      padding-top: 13rem;
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .references {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-@media (min-width: 1200px)  {
+@media (min-width: 1200px) {
   #navbar-top {
     .container {
       max-width: 100%;
@@ -662,6 +727,5 @@ $fs-4: 4rem;
         width: 100%;
       }
     }
-    
   }
 }
